@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32901.82
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab7CSharp", "Lab7CSharp\Lab7CSharp.csproj", "{82DD0C76-B1D5-404F-9D39-E56FEDAF847C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{A2C38F06-20CB-4A14-AF14-B202D7B3BD1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figure", "Figure\Figure.csproj", "{2B5BDF81-ADF1-44B1-A3BF-14263358AB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{8B179131-CC2E-4F8C-92C2-0EDAA0522D39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82DD0C76-B1D5-404F-9D39-E56FEDAF847C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82DD0C76-B1D5-404F-9D39-E56FEDAF847C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82DD0C76-B1D5-404F-9D39-E56FEDAF847C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82DD0C76-B1D5-404F-9D39-E56FEDAF847C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C38F06-20CB-4A14-AF14-B202D7B3BD1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C38F06-20CB-4A14-AF14-B202D7B3BD1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C38F06-20CB-4A14-AF14-B202D7B3BD1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C38F06-20CB-4A14-AF14-B202D7B3BD1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5BDF81-ADF1-44B1-A3BF-14263358AB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5BDF81-ADF1-44B1-A3BF-14263358AB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5BDF81-ADF1-44B1-A3BF-14263358AB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5BDF81-ADF1-44B1-A3BF-14263358AB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B179131-CC2E-4F8C-92C2-0EDAA0522D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B179131-CC2E-4F8C-92C2-0EDAA0522D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B179131-CC2E-4F8C-92C2-0EDAA0522D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B179131-CC2E-4F8C-92C2-0EDAA0522D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
