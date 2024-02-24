@@ -79,6 +79,13 @@ namespace Calculator {
                 if (newSize > MaxFontSize) newSize = MaxFontSize; // Cap at maximum size
                 Font newFont = new Font(currentFont.FontFamily, newSize);
 
+                // While text is still too wide and font size is above minimum
+                while (textWidth < textBox.Width && newSize < MaxFontSize) {
+                    newSize++;
+                    newFont = new Font(currentFont.FontFamily, newSize);
+                    textWidth = TextRenderer.MeasureText(textBox.Text, newFont).Width;
+                }
+
                 // Measure again to ensure the new size fits
                 textWidth = TextRenderer.MeasureText(textBox.Text, newFont).Width;
                 if (textWidth <= textBox.Width) {

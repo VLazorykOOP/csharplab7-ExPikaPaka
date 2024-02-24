@@ -20,7 +20,8 @@ namespace ExpressionParser {
                     endIndex++;
                 }
                 double number = double.Parse(expression.Substring(sqrtIndex + 1, endIndex - sqrtIndex - 1), CultureInfo.InvariantCulture);
-                expression = expression.Replace("√" + number, Math.Sqrt(number).ToString());
+                double sqrtResult = Math.Sqrt(number);
+                expression = expression.Replace("√" + number, sqrtResult.ToString(CultureInfo.InvariantCulture));
             }
 
             // Split the expression into numbers and operators
@@ -61,13 +62,13 @@ namespace ExpressionParser {
 
             // Evaluate multiplication (*) and division (/)
             for (int i = 0; i < operators.Count; i++) {
-                if (operators[i] == '*') {
-                    numbers[i] *= numbers[i + 1];
+                if (operators[i] == '/') {
+                    numbers[i] /= numbers[i + 1];
                     numbers.RemoveAt(i + 1);
                     operators.RemoveAt(i);
                     i--;
-                } else if (operators[i] == '/') {
-                    numbers[i] /= numbers[i + 1];
+                } else if (operators[i] == '*') {
+                    numbers[i] *= numbers[i + 1];
                     numbers.RemoveAt(i + 1);
                     operators.RemoveAt(i);
                     i--;
