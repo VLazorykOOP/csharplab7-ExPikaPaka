@@ -27,6 +27,12 @@ namespace Calculator {
             textBoxIn.Select(textBoxIn.Text.Count(), 0);
         }
 
+        public void checkAndEraseNaN() {
+            if(textBoxIn.Text == "NaN") {
+                textBoxIn.Text = "";
+            }
+        }
+
         public void evaluate() {
             if (textBoxIn.Text != previousText && textBoxIn.Text.Count() > 0) {
                 string expression = textBoxIn.Text;
@@ -35,7 +41,7 @@ namespace Calculator {
                     textBoxOut.Text = textBoxIn.Text + " =";
                     textBoxIn.Text = result;
                 } catch (Exception ex) {
-                    textBoxIn.Text = "Nan";
+                    textBoxIn.Text = "NaN";
                 }
             }
 
@@ -107,6 +113,7 @@ namespace Calculator {
         }
 
         private void buttonErase_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             if (textBoxIn.Text.Length > 0) {
                 textBoxIn.Text = textBoxIn.Text.Remove(textBoxIn.Text.Length - 1);
             }
@@ -114,86 +121,103 @@ namespace Calculator {
         }
 
         private void button0_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "0";
             selectInput();
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "1";
             selectInput();
         }
 
         private void button2_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "2";
             selectInput();
         }
 
         private void button3_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "3";
             selectInput();
         }
 
         private void button4_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "4";
             selectInput();
         }
 
         private void button5_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "5";
             selectInput();
         }
 
         private void button6_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "6";
             selectInput();
         }
 
         private void button7_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "7";
             selectInput();
         }
 
         private void button8_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "8";
             selectInput();
         }
 
         private void button9_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "9";
             selectInput();
         }
 
         private void buttonSqrt_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "√";
             selectInput();
         }
 
         private void buttonPower_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "^";
             selectInput();
         }
 
         private void buttonDivide_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "/";
             selectInput();
         }
 
         private void buttonMultiplicate_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "*";
             selectInput();
         }
 
         private void buttonMinus_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "-";
             selectInput();
         }
 
         private void buttonPlus_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += "+";
             selectInput();
         }
 
         private void buttonComma_Click(object sender, EventArgs e) {
+            checkAndEraseNaN();
             textBoxIn.Text += ",";
             selectInput();
         }

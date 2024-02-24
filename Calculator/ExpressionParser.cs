@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +23,8 @@ namespace ExpressionParser {
                 double number = double.Parse(expression.Substring(sqrtIndex + 1, endIndex - sqrtIndex - 1), CultureInfo.InvariantCulture);
                 double sqrtResult = Math.Sqrt(number);
                 expression = expression.Replace("√" + number, sqrtResult.ToString(CultureInfo.InvariantCulture));
+
+                if (sqrtIndex != 0 && char.IsDigit(expression[sqrtIndex - 1])) throw new Exception("NaN");
             }
 
             // Split the expression into numbers and operators
